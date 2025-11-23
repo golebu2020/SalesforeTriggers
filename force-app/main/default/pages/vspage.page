@@ -1,0 +1,6 @@
+<apex:page >
+  <apex:pageBlock >
+   <h1>Thanks for your understanding...</h1>
+   <h2>You are so Sexy</h2>
+  </apex:pageBlock>
+</apex:page>

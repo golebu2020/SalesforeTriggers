@@ -1,0 +1,11 @@
+<template>
+    <div class="slds-scope container_design">
+        <p class="big-text center-position">{count}</p>
+        <lightning-button-group class="center-position">
+          <lightning-button label="Increase" onclick={handleIncrease}></lightning-button>
+          <lightning-button label="Decrease" onclick={handleDecrease}></lightning-button>
+          <lightning-button label="Reset" onclick={handleReset}></lightning-button>
+        </lightning-button-group>
+    </div>
+
+</template>

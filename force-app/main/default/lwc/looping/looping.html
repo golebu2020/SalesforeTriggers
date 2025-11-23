@@ -1,0 +1,49 @@
+<template>
+
+    <lightning-card title="For Each Loop" icon-name="standard:account" variant="base">
+        <div class="slds-var-m-around_medium">
+            <ul class="slds-has-dividers_around-space">
+                <template for:each={carList} for:item="car" for:index="index">
+                    <li key={car}  class="slds-item_detail">{car}</li>
+                </template>
+            </ul>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Interator Loop" icon-name="standard:account" variant="base">
+        <div class="slds-var-m-around_medium">
+            <ul class="slds-has-dividers_around-space">
+                <template for:each={ceoList} for:item="ceo" for:index="index">
+                    <li key={ceo.id}  class="slds-item_detail">
+                        <strong>{ceo.company}</strong>
+                        <div>{ceo.name}</div>
+                        <hr>
+                    </li>
+                    
+                </template>
+            </ul>
+        </div>
+    </lightning-card>
+
+        <lightning-card title="Interator Loop with Real Iterator" icon-name="standard:account" variant="base">
+        <div class="slds-var-m-around_medium">
+            <ul class="slds-has-dividers_around-space">
+                <template iterator:it={ceoList} >
+                   
+                    <li key={it.value.id}  class="slds-item_detail">
+                        <template lwc:if={it.first}>
+                            <strong>List of Top Companies and their CEOs</strong>
+                        </template>
+                        <strong>{it.value.company}</strong>
+                        <div>{it.value.name}</div>
+                        <hr>
+                        <template lwc:if={it.last}>
+                            <strong>Thanks for Reading the List</strong>
+                        </template>
+                    </li>
+                    
+                </template>
+            </ul>
+        </div>
+    </lightning-card>
+</template>

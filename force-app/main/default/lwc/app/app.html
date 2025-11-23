@@ -1,0 +1,17 @@
+<template>
+  <div class="background__things">
+  <template lwc:if={ready}>
+    <div style="font-weight: 800;" >Name: {name}</div>
+    <div>Description: {description}</div>
+    <lightning-badge label={material}></lightning-badge>
+    <lightning-badge label={category}></lightning-badge>
+    <div>Price: {price}</div>
+    <div><img src={pictureUrl} alt={name}/></div>
+  </template>
+  <template lwc:else>
+    <div class="exampleHolder">
+        <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+    </div>
+  </template>
+    </div>
+</template>

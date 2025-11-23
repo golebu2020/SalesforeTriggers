@@ -1,0 +1,12 @@
+.exampleHolder {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.background__things{
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+}

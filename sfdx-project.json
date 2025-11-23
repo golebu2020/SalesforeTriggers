@@ -7,6 +7,6 @@
   ],
   "name": "SalesforceTrigger",
   "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sfdcLoginUrl": "https://orgfarm-7e94e89432-dev-ed.develop.my.salesforce.com",
   "sourceApiVersion": "65.0"
 }

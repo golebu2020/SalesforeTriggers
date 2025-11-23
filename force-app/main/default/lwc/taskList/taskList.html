@@ -1,0 +1,12 @@
+<template>
+    <template if:true={hasTasks}>
+        <ul>
+            <template for:each={tasks} for:item="task">
+                <li key={task.id}>{task.name}</li>
+            </template>
+        </ul>
+    </template>
+    <template if:false={hasTasks}>
+        <p>No tasks yet.</p>
+    </template>
+</template>
