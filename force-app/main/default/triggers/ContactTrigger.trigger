@@ -21,6 +21,7 @@ trigger ContactTrigger on Contact (before insert, after insert, before update, a
 
     public static void kewlMethod(){
         for (Contact cont: Trigger.new){
+            // DON'T DO THIS: List<Contact> contList = [SELECT Id FROM Contact WHERE Id IN : Trigger.new]
             Contact oldContact = Trigger.oldMap.get(cont.id);
             if (cont.Birthdate != oldContact.Birthdate){
                 // cont.LastName = 'Taco Bell Boi';
@@ -28,5 +29,4 @@ trigger ContactTrigger on Contact (before insert, after insert, before update, a
             }
         }
     }
-
 }
