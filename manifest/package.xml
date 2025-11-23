@@ -4,4 +4,9 @@
         <members>*</members>
         <name>ApexTrigger</name>
     </types>
+    <types>
+        <members>businessCard</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <version>65.0</version>
 </Package>

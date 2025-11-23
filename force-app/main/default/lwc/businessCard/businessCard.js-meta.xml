@@ -11,9 +11,4 @@
         <target>lightning__RecordPage</target>
         <target>lightning__HomePage</target>
     </targets>
-    <targetConfigs>
-        <targetConfig targets="lightningCommunity__Default">
-            <property name="recordId" type="String" label="Contact Record ID"/>
-        </targetConfig>
-    </targetConfigs>
 </LightningComponentBundle>
