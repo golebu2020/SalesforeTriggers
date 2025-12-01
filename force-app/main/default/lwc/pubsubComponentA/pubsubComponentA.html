@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="PubSub demo component A"  icon-name="standard:account" variant="base">
+        <div class="slds-p-around_medium">
+            <lightning-input type="text" onkeyup={inputHandler} class="sld-m-bottom_medium"></lightning-input>
+            <lightning-button 
+              variant="brand"
+              label="publish" 
+              onclick={publishHandler} 
+            ></lightning-button>
+        <span class="slds-var-m-around_medium">
+            <lightning-button 
+              variant="brand"
+              label="Goto Home Page" 
+              onclick={gotoHomePage} 
+            ></lightning-button>
+
+            <lightning-button 
+              variant="brand"
+              label="Goto New Account Page" 
+              onclick={gotoNewAccountPage} 
+            ></lightning-button>
+
+             <lightning-button 
+              variant="brand"
+              label="Goto New Account Page" 
+              onclick={gotoNewChatterPage} 
+            ></lightning-button>
+        </span>
+             
+        </div>
+    </lightning-card>
+</template>

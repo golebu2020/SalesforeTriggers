@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Lifecycle Hook Parent Card" icon-name="standard:account" variant="base">
+
+      <div class="slds-var-m-around_medium">
+        <lightning-button 
+            variant="base"
+            label="Button Label" 
+            title="Looks like a link" 
+            value="" 
+            type="button"
+            onclick={handleClick} 
+            stretch="false" 
+            icon-name="utility:activity"
+            icon-position="left"
+        ></lightning-button>
+
+        <template if:true={showChild}>
+            <c-life-cycle-child></c-life-cycle-child>
+        </template>
+      </div>
+    </lightning-card>
+    
+</template>

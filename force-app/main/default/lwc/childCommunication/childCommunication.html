@@ -1,0 +1,16 @@
+<template>
+    <div>This is the Child Component</div>
+    <div>Is Valid?: {isValid}</div>
+    <div class="slds-var-m-around_medium">
+        <template for:each={avatarData} for:item="item">
+            <lightning-avatar 
+                key={item.initials} 
+                src="/bad/image/url.jpg" 
+                initials={item.initials} 
+                fallback-icon-name={item.fallBackIconName} 
+                alternative-text={item.alternativeText} 
+                class="slds-m-right_small">
+            </lightning-avatar>
+        </template>
+    </div>    
+</template>

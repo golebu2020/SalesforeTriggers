@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Title Component" icon-name="standard:account" variant="base">
+        <c-child-communication 
+            greeting-message = "Greetings from Parent Component"
+            avatar-data = {avatarData}
+            is-valid = {isValid}
+        >
+        </c-child-communication> 
+
+        <lightning-button 
+          variant="base"
+          label="Call Method in Child" 
+          onclick={handleClick} 
+        ></lightning-button>
+
+        <lightning-button 
+          variant="success"
+          label="Action on parent" 
+          onclick={modifyValidity} 
+        ></lightning-button>
+    </lightning-card>
+</template>
