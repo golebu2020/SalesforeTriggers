@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Slot Demo" icon-name="standard:account" variant="base">
+        <c-slot-child-demo>
+            <h6><strong>FirstName: </strong></h6>
+            <p>Chinedu</p>
+            <h6><strong>LastName:</strong> </h6>
+            <p>Oleb</p>
+
+            <div slot ="location"> <!-- named slots-->
+                <span>Chilliwack, Canada</span>
+            </div>
+            <div slot = "profession">
+                <span>Software Engineer</span>
+            </div> 
+        </c-slot-child-demo> 
+    </lightning-card>
+</template>

@@ -1,6 +1,11 @@
 <template>
     <lightning-card title="Setter Demo Parent" icon-name="standard:account" variant="base">
         <div>This is the Parent</div>
-        <c-setter-demo-child></c-setter-demo-child>
+        <c-setter-demo-child public-property={myValue} ></c-setter-demo-child>
+        <lightning-button 
+          variant="base"
+          label="Trigger Value Change" 
+          onclick={handleClick} 
+        ></lightning-button>
     </lightning-card>
 </template>
