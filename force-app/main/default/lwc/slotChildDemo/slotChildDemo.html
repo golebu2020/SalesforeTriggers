@@ -3,4 +3,7 @@
     <slot></slot>
     <slot name ="location"></slot>
     <slot name = "profession"></slot> 
+    <footer class="slds-card__footer slds-hide"  >
+        <slot name="footer" onslotchange={handleFooterChange}></slot>
+    </footer>
 </template>
