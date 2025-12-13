@@ -1,0 +1,33 @@
+<template>
+    <div class="business-card">
+        <div class="card-header">
+            <img if:true={contact.PhotoUrl} src={contact.PhotoUrl} alt="Profile" class="profile-image"/>
+            <div class="header-info">
+                <h1 class="name">{contact.Name}</h1>
+                <p class="title">{contact.Title}</p>
+                <p class="company">{contact.Company}</p>
+            </div>
+        </div>
+        
+        <div class="card-body">
+            <div class="contact-info">
+                <div class="info-item">
+                    <lightning-icon icon-name="utility:email" size="x-small"></lightning-icon>
+                    <span>{contact.Email}</span>
+                </div>
+                <div class="info-item">
+                    <lightning-icon icon-name="utility:phone" size="x-small"></lightning-icon>
+                    <span>{contact.Phone}</span>
+                </div>
+                <div class="info-item">
+                    <lightning-icon icon-name="utility:location" size="x-small"></lightning-icon>
+                    <span>{contact.Address}</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-footer">
+            <lightning-button label="Contact" onclick={handleContact} class="contact-btn"></lightning-button>
+        </div>
+    </div>
+</template>

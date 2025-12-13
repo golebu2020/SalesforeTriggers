@@ -1,0 +1,19 @@
+<template>
+    <lightning-input 
+      label={name}
+      value={name}
+      onchange={handleNameChange}
+      placeholder="Please enter your name"
+    ></lightning-input>
+
+    <lightning-input
+        type="number"
+        label="Age"
+        value={age}
+        min="18"
+        max="100"
+        step="1"
+    ></lightning-input> 
+    
+    
+</template>

@@ -1,0 +1,100 @@
+<template>
+    <lightning-card title="Conditional Rendering" icon-name="standard:account" variant="base">
+        <div class="slds-var-m-around_medium">
+            <lightning-button 
+              variant="brand"
+              label="Show Data" 
+              title="Show Data"
+              onclick={handleClick} 
+              class="slds-var-m-left_x-small"
+            ></lightning-button>
+
+            <div lwc:if={isVisible}>
+                <div>Welcome to Zero to Hero Series</div>
+            </div>
+            
+             <div lwc:else>
+                <div>General User Page2</div>
+            </div>
+        </div>
+    </lightning-card>
+
+    <template for:each={userProfiles} for:item="userProfile">
+        <lightning-card 
+            key={userProfile.id}
+            variant="narrow" 
+            class="profile-card"
+            title={cardTitle}
+        >
+            <div class="slds-card__body slds-card__body_inner">
+                <div class="slds-media slds-media_center">
+                    <!-- Avatar -->
+                    <div class="slds-media__figure">
+                        <div class="slds-avatar slds-avatar_large" title={userProfile.initials}>
+                            <span class="slds-avatar__initials slds-icon-custom-custom23">
+                                {userProfile.initials}
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- User Info -->
+                    <div class="slds-media__body">
+                        <div class="slds-grid slds-wrap slds-gutters">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-3">
+                                <!-- Full Name -->
+                                <h2 class="slds-card__header-title">
+                                    <span class="slds-text-heading_medium slds-truncate" title={userProfile.fullName}>
+                                        {userProfile.fullName}
+                                    </span>
+                                </h2>
+                                
+                                <!-- Profession -->
+                                <div class="slds-text-body_regular slds-m-top_x-small">
+                                    <lightning-icon 
+                                        class="slds-icon-text-default slds-m-right_x-small"
+                                        icon-name="standard:user"
+                                        alternative-text="Profession"
+                                        size="x-small">
+                                    </lightning-icon>
+                                    <span class="slds-text-title slds-truncate" title={userProfile.profession}>
+                                        {userProfile.profession}
+                                    </span>
+                                </div>
+                                
+            
+                            </div>
+                            
+                            <!-- Action Buttons -->
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-text-align_right">
+                                <div class="slds-grid slds-grid_vertical-align-center slds-grid_vertical">
+                                    <lightning-button
+                                        class="slds-m-bottom_x-small"
+                                        variant="brand"
+                                        label="Call"
+                                        title="Call User"
+                                        icon-name="utility:call"
+                                        onclick={handleCallClick}
+                                    ></lightning-button>
+                                    
+                                    <lightning-button
+                                        variant="neutral"
+                                        label="Message"
+                                        title="Message User"
+                                        icon-name="utility:email"
+                                        onclick={handleMessageClick}
+                                    ></lightning-button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer with Additional Info -->
+            <footer class="slds-card__footer">
+                <slot name="footer"></slot>
+            </footer>
+        </lightning-card>
+    </template>
+    
+</template>

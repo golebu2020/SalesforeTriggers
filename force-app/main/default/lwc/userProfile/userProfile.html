@@ -1,0 +1,26 @@
+<template>
+    <div class="profile container_design">
+        <h2>User Profile</h2>
+        <div class="toggle-section">
+            <lightning-input
+                type="checkbox"
+                label="Show Details"
+                checked={showDetails}
+                onchange={handleToggle}>
+            </lightning-input>
+        </div>
+
+        <template if:true={showDetails}>
+            <div class="details">
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Email:</strong> john.doe@example.com</p>
+                <p><strong>Role:</strong> System Administrator</p>
+                <p><strong>Last Login:</strong> {lastLogin}</p>
+            </div>
+        </template>
+
+        <template if:false={showDetails}>
+            <p>Click the checkbox to view user details</p>
+        </template>
+    </div>
+</template>

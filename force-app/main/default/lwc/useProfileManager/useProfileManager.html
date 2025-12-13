@@ -1,0 +1,37 @@
+<template>
+    <lightning-card class="container_design" title="User Profile Manager">
+        <div class="slds-p-horizontal_small">
+            <p><strong>First Name: </strong>{firstName}</p>
+            <p><strong>Last Name: </strong>{lastName}</p>
+            <p><strong>Role: </strong>{role}</p>
+            <p><strong>Department: </strong>{department}</p>
+            <p><strong>Email: </strong>{email}</p>
+            <p><strong>Phone: </strong>{phone}</p>
+            <p><strong>Location: </strong>{location}</p>
+            <p><strong>Start Date: </strong>{startDate}</p>
+            <p><strong>Active: </strong>{isActive}</p>
+        </div>
+        <div slot="footer">
+            <div class="left-just">
+                <lightning-input
+                    type="checkbox"
+                    label="Basic View"
+                    name="basic-view"
+                ></lightning-input>
+
+                <lightning-input
+                    type="checkbox"
+                    label="Detailed View"
+                    name="detailed-view"
+                ></lightning-input>
+
+                <lightning-input
+                    type="checkbox"
+                    label="Contact View"
+                    name="contact-view"
+                ></lightning-input>
+            </div>
+
+        </div>
+    </lightning-card>
+</template>

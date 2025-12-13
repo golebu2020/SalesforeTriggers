@@ -1,0 +1,92 @@
+<template>
+    <form>
+ <div class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-standard-question-feed">
+                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#question_feed"></use>
+                        </svg>
+                    </span>
+                </div>
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        <span class="slds-text-heading_small">Quiz Questions</span>
+                    </h2>
+                </div>
+            </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">
+            <div class="slds-tile_board">
+                <template for:each={quizData} for:item="quiz">
+                    <div key={quiz.id} class="slds-tile slds-m-bottom_medium">
+                        <div class="slds-tile__detail">
+                            <h3 class="slds-tile__title slds-truncate slds-text-heading_small" title={quiz.question}>
+                                <strong>{quiz.question}</strong>
+                            </h3>
+                            <div class="slds-tile__body">
+                                <ul class="slds-list slds-list_vertical slds-has-dividers_top-space">
+                                    <li class="slds-item">
+                                        <div class="slds-grid slds-grid_align-spread slds-hint-parent">
+                                            <span class="slds-radio">
+                                                <label style="margin-right: 10px">a.   </label>
+                                                <input type="radio" id={quiz.answers.a} onchange={updateAnswers}  name={quiz.id} value="a" />
+                                                <label class="slds-radio__label" for={quiz.answers.a}>
+                                                    <span class="slds-radio_faux"></span>
+                                                    <span class="slds-form-element__label">{quiz.answers.a}</span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li class="slds-item">
+                                        <div class="slds-grid slds-grid_align-spread slds-hint-parent">
+                                            <span class="slds-radio">
+                                                <label style="margin-right: 10px">b.   </label>
+                                                <input type="radio" id={quiz.answers.b} onchange={updateAnswers} name={quiz.id} value="b" />
+                                                <label class="slds-radio__label" for={quiz.answers.b}>
+                                                    <span class="slds-radio_faux"></span>
+                                                    <span class="slds-form-element__label">{quiz.answers.b}</span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li class="slds-item">
+                                        <div class="slds-grid slds-grid_align-spread slds-hint-parent">
+                                            <span class="slds-radio">
+                                                <label style="margin-right: 10px">c.   </label>
+                                                <input type="radio" id={quiz.answers.c} onchange={updateAnswers} name={quiz.id} value="c" />
+                                                <label class="slds-radio__label" for={quiz.answers.c}>
+                                                    <span class="slds-radio_faux"></span>
+                                                    <span class="slds-form-element__label">{quiz.answers.c}</span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li class="slds-item">
+                                        <div class="slds-grid slds-grid_align-spread slds-hint-parent">
+                                            <span class="slds-radio">
+                                                <label style="margin-right: 10px">d.   </label>
+                                                <input type="radio" id={quiz.answers.d} onchange={updateAnswers} name={quiz.id} value="d" />
+                                                <label class="slds-radio__label" for={quiz.answers.d}>
+                                                    <span class="slds-radio_faux"></span>
+                                                    <span class="slds-form-element__label">{quiz.answers.d}</span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+        <h2 class="slds-text-title_bold slds-text-color_success">{scoreSentence}</h2>
+        <footer class="slds-card__footer">
+            <button class="slds-button slds-button_brand" type="submit" onclick={handleClick}>Submit Answers</button>
+        </footer>
+    </div>
+    </form>
+   
+</template>

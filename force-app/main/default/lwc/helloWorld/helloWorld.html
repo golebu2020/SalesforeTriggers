@@ -1,0 +1,25 @@
+<template>
+   <!-- <h1>{fullName}</h1> -->
+
+    <lightning-card  title="Enter your name">
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" label="Enter Course Name" onkeyup={changeHandler}></lightning-input>
+            <div>{fullName} is a course of {title}</div>
+        </div>
+    </lightning-card>
+    <div class="slds-m-top_small"></div>
+    <lightning-card title="Enter City Name">
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" label="Enter City Name" onkeyup={changeCity}></lightning-input>
+            <div>{address.city}</div>
+        </div>
+    </lightning-card>
+
+    <div class="slds-m-top_small"></div>
+    <lightning-card title="Getters Demo">
+         <div class="slds-m-around_medium">
+            <div>{firstUser}</div>
+            <div>Multiplication of {num1} and {num2} is {multiply}</div>
+         </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,81 @@
+.business-card {
+    max-width: 400px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    margin: 16px;
+    font-family: 'Salesforce Sans', Arial, sans-serif;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f3f3f3;
+    padding-bottom: 20px;
+}
+
+.profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 16px;
+    border: 3px solid #0176d3;
+}
+
+.header-info {
+    flex: 1;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #032d60;
+    margin: 0 0 4px 0;
+}
+
+.title {
+    font-size: 16px;
+    color: #0176d3;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.company {
+    font-size: 14px;
+    color: #747474;
+    margin: 0;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #444444;
+}
+
+.info-item lightning-icon {
+    --sds-c-icon-color-foreground-default: #0176d3;
+}
+
+.card-footer {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #f3f3f3;
+    text-align: center;
+}
+
+.contact-btn {
+    --sds-c-button-brand-color-background: #0176d3;
+    --sds-c-button-brand-color-border: #0176d3;
+    --sds-c-button-brand-text-color: white;
+}
